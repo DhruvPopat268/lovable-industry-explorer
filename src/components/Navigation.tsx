@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,12 +14,10 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const industryItems = [
-    { title: "General Contractors", href: "/general-contractors" },
+    { title: "Commercial", href: "/commercial" },
+    { title: "Industrial", href: "/industrial" },
     { title: "Infrastructure", href: "/infrastructure" },
-    { title: "Industrial Construction", href: "/industrial" },
-    { title: "Commercial Construction", href: "/commercial" },
-    { title: "Specialty Contractors", href: "/specialty" },
-    { title: "Owners", href: "/owners" },
+    { title: "Institutional", href: "/institutional" },
   ];
 
   return (
@@ -46,10 +45,10 @@ const Navigation = () => {
               
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary px-3 py-2 text-sm font-medium">
-                  Industries
+                  Industry
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56">
+                <DropdownMenuContent className="w-56 bg-white border shadow-lg">
                   {industryItems.map((item) => (
                     <DropdownMenuItem key={item.href} asChild>
                       <Link to={item.href} className="w-full">
@@ -60,14 +59,11 @@ const Navigation = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <Link to="/features" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium">
-                Features
+              <Link to="/our-story" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium">
+                Our Story
               </Link>
-              <Link to="/pricing" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium">
-                Pricing
-              </Link>
-              <Link to="/resources" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium">
-                Resources
+              <Link to="/contact" className="text-foreground hover:text-primary px-3 py-2 text-sm font-medium">
+                Contact Us
               </Link>
             </div>
           </div>
@@ -107,7 +103,7 @@ const Navigation = () => {
               </Link>
               
               <div className="px-3 py-2">
-                <span className="text-sm font-medium text-muted-foreground">Industries</span>
+                <span className="text-sm font-medium text-muted-foreground">Industry</span>
                 <div className="mt-2 space-y-1">
                   {industryItems.map((item) => (
                     <Link
@@ -123,25 +119,18 @@ const Navigation = () => {
               </div>
 
               <Link
-                to="/features"
+                to="/our-story"
                 className="text-foreground hover:text-primary block px-3 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Features
+                Our Story
               </Link>
               <Link
-                to="/pricing"
+                to="/contact"
                 className="text-foreground hover:text-primary block px-3 py-2 text-base font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Pricing
-              </Link>
-              <Link
-                to="/resources"
-                className="text-foreground hover:text-primary block px-3 py-2 text-base font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Resources
+                Contact Us
               </Link>
               
               <div className="px-3 py-2 space-y-2">
