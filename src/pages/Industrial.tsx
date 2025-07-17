@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,17 +9,17 @@ const Industrial = () => {
     {
       title: "Reduce project timelines",
       description: "Streamline workflows and accelerate project delivery with integrated planning tools.",
-      icon: <Clock className="h-6 w-6" />
+      icon: <Clock className="h-8 w-8" />
     },
     {
       title: "Precise access to your data",
       description: "Get real-time insights into project performance with advanced analytics and reporting.",
-      icon: <BarChart className="h-6 w-6" />
+      icon: <BarChart className="h-8 w-8" />
     },
     {
       title: "Make better decisions",
       description: "Use data-driven insights to optimize safety, cost, and timeline considerations.",
-      icon: <Shield className="h-6 w-6" />
+      icon: <Shield className="h-8 w-8" />
     }
   ];
 
@@ -28,13 +29,26 @@ const Industrial = () => {
     { number: "60%", label: "Reduction of pre-startup issues" }
   ];
 
+  const companiesData = [
+    "Edged", "Industrial Controls", "Builders", "M&J Engineering", "Project Partners"
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-construction-blue to-construction-gray text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-construction-blue to-construction-gray text-white py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/api/placeholder/1920/800"
+            alt="Industrial construction site"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-construction-blue/80 to-construction-gray/60" />
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="mb-6">
@@ -49,8 +63,7 @@ const Industrial = () => {
               </h1>
               
               <p className="text-xl mb-8 text-white/90">
-                Turn your toughest builds into your most successful ones by connecting 
-                the people building our industry's greatest constructions.
+                Turn your toughest builds into your most successful ones by connecting the people building our industry's greatest constructions.
               </p>
 
               <Button variant="hero" size="lg" className="bg-primary hover:bg-primary-hover">
@@ -59,36 +72,30 @@ const Industrial = () => {
             </div>
 
             <div className="relative">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
-                <div className="bg-white rounded-lg shadow-2xl p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div className="text-sm font-medium text-gray-500">Industrial Project</div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    </div>
-                    
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="bg-primary/10 p-3 rounded text-center">
-                        <div className="text-lg font-bold text-primary">85%</div>
-                        <div className="text-xs text-gray-600">Complete</div>
-                      </div>
-                      <div className="bg-green-100 p-3 rounded text-center">
-                        <div className="text-lg font-bold text-green-600">12</div>
-                        <div className="text-xs text-gray-600">On Track</div>
-                      </div>
-                      <div className="bg-yellow-100 p-3 rounded text-center">
-                        <div className="text-lg font-bold text-yellow-600">3</div>
-                        <div className="text-xs text-gray-600">At Risk</div>
-                      </div>
-                    </div>
-                    
-                    <div className="h-20 bg-gray-100 rounded flex items-center justify-center">
-                      <span className="text-gray-500 text-sm">Progress Timeline</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <img
+                src="/api/placeholder/600/400"
+                alt="Industrial construction dashboard"
+                className="rounded-lg shadow-2xl"
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm text-muted-foreground mb-4">
+              Industrial construction software trusted by builders on 200+ projects
+            </p>
+          </div>
+          <div className="flex justify-center items-center flex-wrap gap-8 opacity-70">
+            {companiesData.map((company, index) => (
+              <div key={index} className="text-center">
+                <div className="text-lg font-semibold text-muted-foreground">{company}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -131,7 +138,7 @@ const Industrial = () => {
               Purpose-Built for Industrial Construction
             </h2>
             
-            <div className="flex justify-center space-x-8 mt-8">
+            <div className="flex justify-center flex-wrap gap-4 mt-8">
               <button className="px-6 py-2 bg-primary text-white rounded-lg font-medium">
                 Document Management
               </button>
@@ -168,23 +175,11 @@ const Industrial = () => {
             </div>
 
             <div className="relative">
-              <div className="bg-white rounded-xl shadow-construction p-8">
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium text-gray-500">Project Files</div>
-                    <div className="text-sm text-primary">View All</div>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    {["Structural Drawings", "Electrical Plans", "Safety Reports", "Progress Photos"].map((item, index) => (
-                      <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                        <span className="text-sm font-medium">{item}</span>
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/api/placeholder/500/400" 
+                alt="Industrial construction project management interface"
+                className="w-full rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
@@ -211,6 +206,18 @@ const Industrial = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Learn More Section */}
+      <section className="py-20 bg-black text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            Learn more about how Autodesk's software can support your industrial construction projects.
+          </h2>
+          <Button variant="hero" size="lg" className="bg-primary hover:bg-primary-hover">
+            Get Started
+          </Button>
         </div>
       </section>
 

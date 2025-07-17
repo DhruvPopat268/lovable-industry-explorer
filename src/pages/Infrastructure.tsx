@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,17 +9,17 @@ const Infrastructure = () => {
     {
       title: "Deliver on time and budget",
       description: "Keep track of project timelines and budgets with real-time insights and predictive analytics.",
-      icon: <Clock className="h-6 w-6" />
+      icon: <Clock className="h-8 w-8" />
     },
     {
       title: "Scale with greater resilience",
       description: "Build infrastructure that stands the test of time with advanced planning and risk management tools.",
-      icon: <TrendingUp className="h-6 w-6" />
+      icon: <TrendingUp className="h-8 w-8" />
     },
     {
-      title: "Make better decisions",
+      title: "Find and task what your team needs",
       description: "Use data-driven insights to make informed decisions that reduce costs and improve outcomes.",
-      icon: <DollarSign className="h-6 w-6" />
+      icon: <DollarSign className="h-8 w-8" />
     }
   ];
 
@@ -29,18 +30,35 @@ const Infrastructure = () => {
     { number: "13.9K Hrs", label: "of work saved across all stakeholders" }
   ];
 
+  const companiesData = [
+    { name: "SKANSKA", logo: "/api/placeholder/120/60" },
+    { name: "DPR Construction", logo: "/api/placeholder/120/60" },
+    { name: "Boldt", logo: "/api/placeholder/120/60" },
+    { name: "Gaylor", logo: "/api/placeholder/120/60" },
+    { name: "Walsh", logo: "/api/placeholder/120/60" }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-construction-blue to-construction-gray text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-br from-construction-blue to-construction-gray text-white py-24 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/api/placeholder/1920/800"
+            alt="Infrastructure construction site"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-construction-blue/80 to-construction-gray/60" />
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="mb-6">
                 <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
-                  INFRASTRUCTURE CONSTRUCTION
+                  INFRASTRUCTURE CONSTRUCTION SOFTWARE
                 </span>
               </div>
               
@@ -50,22 +68,39 @@ const Infrastructure = () => {
               </h1>
               
               <p className="text-xl mb-8 text-white/90">
-                Build infrastructure that connecting the people who build infrastructure, 
-                starting with the project from kick-off to handoff.
+                Build infrastructure that connects communities. Starting with the project team kick-off to handoff.
               </p>
 
               <Button variant="hero" size="lg" className="bg-primary hover:bg-primary-hover">
-                Get Started Free
+                Get Started
               </Button>
             </div>
 
             <div className="relative">
               <img
                 src="/api/placeholder/600/400"
-                alt="Infrastructure construction site"
+                alt="Infrastructure construction dashboard"
                 className="rounded-lg shadow-2xl"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm text-muted-foreground mb-4">
+              Trusted by owners, contractors, and consultants globally
+            </p>
+          </div>
+          <div className="flex justify-center items-center space-x-12 opacity-70">
+            {companiesData.map((company, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl font-bold text-muted-foreground">{company.name}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -121,11 +156,10 @@ const Infrastructure = () => {
               <div className="space-y-6">
                 <div className="border-l-4 border-primary pl-6">
                   <h4 className="font-semibold text-foreground mb-2">
-                    Better, Fact, and Smarter
+                    Better, Fast, and Smarter
                   </h4>
                   <p className="text-muted-foreground">
-                    Enhanced collaboration between project stakeholders, faster project delivery, 
-                    and smarter decision-making tools.
+                    Enhanced collaboration between project stakeholders, faster project delivery, and smarter decision-making tools.
                   </p>
                 </div>
                 
@@ -134,7 +168,7 @@ const Infrastructure = () => {
                     Real Outcomes
                   </h4>
                   <p className="text-muted-foreground">
-                    Meet deadlines and budgets while maintaining quality standards.
+                    Meet deadlines and budgets while maintaining quality standards through comprehensive project oversight.
                   </p>
                 </div>
                 
@@ -143,7 +177,7 @@ const Infrastructure = () => {
                     Better Infrastructure  
                   </h4>
                   <p className="text-muted-foreground">
-                    Build infrastructure that stands the test of time with proper planning and execution.
+                    Build infrastructure that stands the test of time with proper planning, execution, and quality control.
                   </p>
                 </div>
               </div>
@@ -156,27 +190,11 @@ const Infrastructure = () => {
 
             <div className="relative">
               <div className="bg-white rounded-xl shadow-construction p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm font-medium text-gray-500">Infrastructure Dashboard</div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-primary/10 p-4 rounded-lg">
-                      <div className="text-2xl font-bold text-primary">92%</div>
-                      <div className="text-sm text-gray-600">On Schedule</div>
-                    </div>
-                    <div className="bg-green-100 p-4 rounded-lg">
-                      <div className="text-2xl font-bold text-green-600">$2.1M</div>
-                      <div className="text-sm text-gray-600">Under Budget</div>
-                    </div>
-                  </div>
-                  
-                  <div className="h-32 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500">Project Progress Chart</span>
-                  </div>
-                </div>
+                <img 
+                  src="/api/placeholder/500/400" 
+                  alt="Infrastructure project management software interface"
+                  className="w-full rounded-lg"
+                />
               </div>
             </div>
           </div>
@@ -204,6 +222,18 @@ const Infrastructure = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Learn More Section */}
+      <section className="py-20 bg-black text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            Learn more about how Autodesk's software can support your infrastructure construction projects.
+          </h2>
+          <Button variant="hero" size="lg" className="bg-primary hover:bg-primary-hover">
+            Get Started
+          </Button>
         </div>
       </section>
 
