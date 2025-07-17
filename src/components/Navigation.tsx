@@ -27,11 +27,15 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <div className="h-8 w-8 bg-primary rounded flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CC</span>
+              <div className="h-8 w-8 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/ecffcb72-cfd0-4859-9099-2fdd4e94d379.png" 
+                  alt="1 VANS Logo" 
+                  className="h-8 w-8 object-contain filter invert"
+                />
               </div>
               <span className="ml-2 text-xl font-semibold text-foreground">
-                Construction Cloud
+                1 VANS
               </span>
             </Link>
           </div>

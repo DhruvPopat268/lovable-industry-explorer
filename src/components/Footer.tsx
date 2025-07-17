@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -104,17 +105,21 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/20 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
           <div className="flex items-center space-x-8">
             <div className="flex items-center">
-              <div className="h-8 w-8 bg-primary rounded flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CC</span>
+              <div className="h-8 w-8 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/ecffcb72-cfd0-4859-9099-2fdd4e94d379.png" 
+                  alt="1 VANS Logo" 
+                  className="h-8 w-8 object-contain"
+                />
               </div>
               <span className="ml-2 text-lg font-semibold">
-                Construction Cloud
+                1 VANS
               </span>
             </div>
           </div>
 
           <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-8 text-sm text-white/70">
-            <div>© 2024 Construction Cloud. All rights reserved.</div>
+            <div>© 2024 1 VANS. All rights reserved.</div>
             <div className="flex space-x-6">
               <Link to="#" className="hover:text-white transition-colors">Terms</Link>
               <Link to="#" className="hover:text-white transition-colors">Privacy</Link>
