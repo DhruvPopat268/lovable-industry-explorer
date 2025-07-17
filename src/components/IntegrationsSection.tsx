@@ -34,7 +34,7 @@ const IntegrationsSection = () => {
             </div>
             <div className="flex-1 text-center lg:text-left">
               <blockquote className="text-lg lg:text-xl text-foreground mb-4">
-                "We can do the entire project in Autodesk Construction Cloud instead of doing BIM coordination in a separate piece of software first."
+                "We can do the entire project in Autodesk 1 Vansh instead of doing BIM coordination in a separate piece of software first."
               </blockquote>
               <div className="text-construction-blue font-semibold">John Doe</div>
               <div className="text-sm text-muted-foreground">Project Manager, Construction Pro</div>

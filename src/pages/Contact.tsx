@@ -106,7 +106,7 @@ const Contact = () => {
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Ready to transform your construction projects? Our team is here to help 
-                you get started with Construction Cloud.
+                you get started with 1 Vansh.
               </p>
 
               <div className="space-y-6">
@@ -150,7 +150,7 @@ const Contact = () => {
                   Ready to get started?
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Schedule a demo to see how Construction Cloud can transform your projects.
+                  Schedule a demo to see how 1 Vansh can transform your projects.
                 </p>
                 <Button variant="hero" className="w-full">
                   Schedule Demo

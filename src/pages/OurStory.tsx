@@ -27,7 +27,7 @@ const OurStory = () => {
     { year: "2015", title: "Company Founded", description: "Started with a vision to revolutionize construction project management" },
     { year: "2018", title: "10,000 Users", description: "Reached our first major milestone of active users across North America" },
     { year: "2020", title: "Global Expansion", description: "Expanded operations to serve construction projects worldwide" },
-    { year: "2023", title: "Industry Leader", description: "Recognized as the leading construction cloud platform" }
+    { year: "2023", title: "Industry Leader", description: "Recognized as the leading 1 Vansh platform" }
   ];
 
   return (
@@ -43,7 +43,7 @@ const OurStory = () => {
             </h1>
             <p className="text-xl mb-8 text-white/90 max-w-3xl mx-auto">
               Building the future of construction, one project at a time. 
-              Learn about our mission, values, and the team behind Construction Cloud.
+              Learn about our mission, values, and the team behind 1 Vansh.
             </p>
           </div>
         </div>

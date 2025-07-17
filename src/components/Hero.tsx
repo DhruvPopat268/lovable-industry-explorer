@@ -21,14 +21,14 @@ const Hero = () => {
           <div className="text-white">
             <div className="mb-6">
               <span className="inline-block bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium">
-                AUTODESK CONSTRUCTION CLOUD
+                AUTODESK 1 Vansh
               </span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
               Build it with
               <br />
-              <span className="text-primary">Construction Cloud</span>
+              <span className="text-primary">1 Vansh</span>
             </h1>
             
             <p className="text-xl lg:text-2xl mb-8 text-white/90 max-w-lg">
